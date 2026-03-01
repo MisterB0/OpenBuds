@@ -1,6 +1,9 @@
 #include "AudioTools.h"
 #include "BluetoothA2DPSink.h"
 
+// OpenBuds by MistaaB
+// 2026 Version 4.1
+
 AnalogAudioStream out;
 VolumeStream volume(out);
 BluetoothA2DPSink a2dp_sink(volume);
@@ -26,7 +29,7 @@ void setup() {
   a2dp_sink.set_task_core(1);
   a2dp_sink.set_task_priority(22);
   a2dp_sink.set_mono_downmix(true);
-  a2dp_sink.start("ESP32-Kopfhoerer");
+  a2dp_sink.start("OpenBuds");
 
   Serial.println("Bluetooth ready — pair from your phone!");
   Serial.println("Send 'v0' to 'v100' via Serial to change volume.");
